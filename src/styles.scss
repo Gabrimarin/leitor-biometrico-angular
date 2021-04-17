@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "/src/styles/settings/variables";
+
+body {
+  margin: 0;
+  background-color: $light-blue;
+  font-family: "Dosis", sans-serif;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: $dark-orange;
+}
+.card {
+  display: flex;
+  margin: auto;
+  margin-top: 100px;
+  background-color: white;
+  width: 70%;
+  margin-bottom: 100px;
+  padding: 30px;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.41);
+  border-radius: 8px;
+}
+
+p {
+  font-size: 20px;
+  text-align: justify;
+}
+h1 {
+  text-align: center;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+.bold {
+  font-weight: bold;
+  color: $light-orange;
+}
+
+.img-container {
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  border-color: $light-orange;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.img-container:hover {
+  -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 18px -1px $light-orange + aa;
+}
+
+.img {
+  width: 100%;
+}

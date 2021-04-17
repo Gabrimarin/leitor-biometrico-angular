@@ -1,0 +1,85 @@
+@import "/src/styles/settings/variables";
+
+.logo {
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 25px;
+  margin: auto;
+
+  color: white;
+  font-family: "Lucida Handwriting", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  padding: 5px;
+  border-radius: 20px;
+  margin-left: 50px;
+  align-items: center;
+  justify-content: center;
+  // background-color: red;/
+}
+
+.shadowed {
+  height: 60px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    -webkit-filter: drop-shadow(0px 0px 1px rgb(52, 40, 214));
+    filter: drop-shadow(0px 0px 10px rgb(11, 239, 255));
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes color {
+  0% {
+    filter: drop-shadow(0px 0px 10px rgba(11, 239, 255, 0));
+  }
+  20% {
+    filter: drop-shadow(0px 0px 10px rgb(11, 239, 255));
+  }
+  40% {
+    filter: drop-shadow(0px 0px 10px rgb(0, 255, 85));
+  }
+  60% {
+    filter: drop-shadow(0px 0px 10px rgb(255, 145, 0));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 10px rgba(11, 239, 255, 0));
+  }
+}
+
+.container {
+  background-color: $medium-blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+
+  position: fixed;
+  height: 80px;
+  display: flex;
+  transition: 0.3s;
+}
+
+.container.hide-nav {
+  top: -60px; /* You can play on opacity for nice transitions*/
+  opacity: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 50px;
+}
