@@ -1,4 +1,7 @@
-# LeitorBiometrico
+# Leitor Biométrico com Arduino
+
+Portal construído em Angular com o propósito de ensinar alunos de eletrônica a construírem um leitor biométrico usando Arduino.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
