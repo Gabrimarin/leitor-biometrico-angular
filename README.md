@@ -1,5 +1,8 @@
 # Leitor Biométrico com Arduino
 
+![led3](https://user-images.githubusercontent.com/47635755/115101468-d9625b80-9f1a-11eb-85ef-dca555230cbd.png)
+
+
 Portal construído em Angular com o propósito de ensinar alunos de eletrônica a construírem um leitor biométrico usando Arduino.
 
 
