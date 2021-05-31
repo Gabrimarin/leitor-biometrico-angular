@@ -1,0 +1,46 @@
+<div class="card">
+  <h1>Cadastro de Digital</h1>
+  <p>
+    Para usar bem um sistema biométrico é necessário guardar dados. No caso de
+    um sensor de digitais, é preciso que dados de impressões digitais possam ser
+    armazenadas de forma rápida e eficiente. Sabendo disso, veremos nesta aba o
+    quão fácil e prático é realizar o cadastro de uma digital no sensor AS608
+    conectado a um Arduino.
+  </p>
+
+  <h2>Conexão e configuração do Arduino</h2>
+  <p>Primeiramente, faça a seguinte conexão:</p>
+  <div class="img-container">
+    <img src="../../../assets/images/image_1.jpg" class="img" />
+  </div>
+  <p>
+    No menu <span class="bold">Arquivo</span> escolha
+    <span class="bold"
+      >Exemplos > Adafruit Figerprint Sensor Library > Enroll</span
+    >, como ilustra a figura abaixo:
+  </p>
+  <div class="img-container">
+    <img src="../../../assets/images/image_2.png" class="img" />
+  </div>
+  <p>
+    Após encontrar o leitor biométrico, cadastre o dedo digitando um número de
+    <span class="bold">1 a 127</span> e clique em enviar. Observe que é
+    solicitado por o dedo duas vezes.
+  </p>
+  <div class="img-container">
+    <img src="../../../assets/images/image_3.png" class="img" />
+  </div>
+  <p>É preciso aguardar até que apareça o seguinte:</p>
+  <div class="img-container">
+    <img src="../../../assets/images/image_4.png" class="img" />
+  </div>
+  <p>
+    Você será solicitado a colocar o mesmo dedo duas vezes no scanner. Se você
+    receber a mensagem *"Impressões correspondentes!"* (Prints matched!),
+    conforme mostrado abaixo, significa que sua impressão digital foi armazenada
+    com sucesso. Se não, repita o processo até ter sucesso.
+  </p>
+  <div class="img-container">
+    <img src="../../../assets/images/image_5.png" class="img" />
+  </div>
+</div>

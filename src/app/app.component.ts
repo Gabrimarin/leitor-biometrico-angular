@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,11 @@ export class AppComponent implements OnInit {
   title = 'leitor-biometrico';
   scrollTop = 0;
   hideNav = false;
-
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+    this.hideNav = this.scrollTop < $event.target['scrollingElement'].scrollTop;
+    this.scrollTop = $event.target['scrollingElement'].scrollTop;
+  }
+  opened = false;
 
   ngOnInit() {}
 }

@@ -1,4 +1,27 @@
-<app-nav-bar> </app-nav-bar>
-<router-outlet>
-  <app-intro></app-intro>
-</router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [mode]="'over'" [(opened)]="opened">
+    <div class="logo-container">
+      <img src="../../../assets/led3.png" class="shadowed" />
+      <span href="#" class="logo">Leitor Biométrico</span>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div
+      [class.hide-nav]="hideNav"
+      fxHide.gt-sm="true"
+      class="side-nav-button-container"
+    >
+      <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        class="side-nav-button"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div fxShow="true" fxHide.lt-md="true">
+      <app-nav-bar [hideNav]="hideNav"> </app-nav-bar>
+    </div>
+    <router-outlet> </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

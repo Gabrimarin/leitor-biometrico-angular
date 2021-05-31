@@ -1,12 +1,11 @@
-<div class="container" [class.hide-nav]="hideNav">
+<div class="header-container" [class.hide-nav]="hideNav">
   <div class="logo-container">
     <img src="../../../assets/led3.png" class="shadowed" />
     <span href="#" class="logo">Leitor Biométrico</span>
   </div>
-
   <div class="wrapper">
-    <app-nav-bar-item title="O QUE É?" active="true"></app-nav-bar-item>
-    <app-nav-bar-item title="REGISTRO"></app-nav-bar-item>
-    <app-nav-bar-item title="APLICAÇÃO"></app-nav-bar-item>
+    <app-nav-bar-item title="O QUE É?" active="true"  link="/introducao"></app-nav-bar-item>
+    <app-nav-bar-item title="REGISTRO" link="/registro"></app-nav-bar-item>
+    <app-nav-bar-item title="APLICAÇÃO" link="/aplicacao"></app-nav-bar-item>
   </div>
 </div>

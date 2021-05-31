@@ -9,12 +9,52 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 h1,
 h2,
 h3,
 h4 {
-  color: $dark-orange;
+  color: $light-orange;
 }
+
+.header-container {
+  background-color: $medium-blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0px;
+  position: fixed;
+  height: 80px;
+  display: flex;
+  transition: 0.3s;
+
+  &.hide-nav {
+    top: -60px;
+  }
+}
+
+.side-nav-button-container {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  transition: 0.3s;
+
+  &.hide-nav {
+    left: -60px;
+  }
+}
+
+.side-nav-button {
+  color: $light-orange;
+  background-color: $dark-blue;
+}
+
+.hide-nav {
+  opacity: 0;
+}
+
 .card {
   display: flex;
   margin: auto;
@@ -46,13 +86,15 @@ h3 {
 
 .bold {
   font-weight: bold;
-  color: $light-orange;
+  color: $dark-orange;
 }
 
 .img-container {
-  width: 50%;
+  width: 40%;
   padding: 20px;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
@@ -69,4 +111,68 @@ h3 {
 
 .img {
   width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.shadowed {
+  height: 60px;
+  -webkit-filter: drop-shadow(0px 0px 5px #222);
+  filter: drop-shadow(0px 0px 5px #222);
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    -webkit-filter: drop-shadow(0px 0px 1px rgb(52, 40, 214));
+    filter: drop-shadow(0px 0px 10px rgb(11, 239, 255));
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes color {
+  0% {
+    filter: drop-shadow(0px 0px 10px rgba(11, 239, 255, 0));
+  }
+  20% {
+    filter: drop-shadow(0px 0px 10px rgb(11, 239, 255));
+  }
+  40% {
+    filter: drop-shadow(0px 0px 10px rgb(0, 255, 85));
+  }
+  60% {
+    filter: drop-shadow(0px 0px 10px rgb(255, 145, 0));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 10px rgba(11, 239, 255, 0));
+  }
+}
+
+.logo {
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 25px;
+  margin: auto;
+
+  color: white;
+  font-family: "Lucida Handwriting", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  padding: 5px;
+  border-radius: 20px;
+  margin-left: 50px;
+  align-items: center;
+  justify-content: center;
+  // background-color: red;/
 }
